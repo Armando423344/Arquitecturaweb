@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BREACKS DIGITAL AGENCY</title>
+    <link rel="stylesheet" href="Estilos.css">
+    <style>
+        :root {
+            --primary: #111111;
+            --secondary: #bfa14a;
+            --accent: #bfa14a;
+            --white: #fff;
+            --shadow: 0 8px 32px rgba(44,62,80,0.12);
+            --gradient: linear-gradient(120deg, #bfa14a 0%, #111111 100%);
+            --gradient-dark: linear-gradient(90deg, #bfa14a 0%, #111111 100%);
+            --gradient-card: linear-gradient(120deg, #222 0%, #bfa14a 100%);
+        }
+        body {
+            min-height: 100vh;
+            margin: 0;
+            font-family: 'Segoe UI', Arial, sans-serif;
+            background: var(--gradient);
+            color: #fff;
+        }
+        header {
+            background: var(--gradient-dark);
+            color: var(--white);
+            padding: 56px 0 40px 0;
+            text-align: center;
+            box-shadow: var(--shadow);
+            position: relative;
+            overflow: hidden;
+        }
+        header::before {
+            content: "";
+            position: absolute;
+            left: -80px;
+            top: -80px;
+            width: 260px;
+            height: 260px;
+            background: radial-gradient(circle, #bfa14a55 60%, transparent 100%);
+            z-index: 0;
+        }
+        header h1 {
+            font-size: 3.2rem;
+            margin: 0;
+            letter-spacing: 2px;
+            font-weight: 700;
+            position: relative;
+            z-index: 1;
+        }
+        header p {
+            font-size: 1.35rem;
+            margin-top: 18px;
+            color: #fffbe6;
+            font-weight: 400;
+            position: relative;
+            z-index: 1;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 56px auto;
+            padding: 0 24px;
+        }
+        /* Diferenciador */
+        .diferenciador {
+            background: var(--gradient-dark);
+            color: var(--white);
+            padding: 44px 36px;
+            border-radius: 28px;
+            box-shadow: var(--shadow);
+            display: flex;
+            align-items: center;
+            gap: 44px;
+            flex-wrap: wrap;
+            margin-bottom: 56px;
+            position: relative;
+            overflow: hidden;
+        }
+        .diferenciador::after {
+            content: "";
+            position: absolute;
+            right: -60px;
+            bottom: -60px;
+            width: 180px;
+            height: 180px;
+            background: radial-gradient(circle, #bfa14a55 60%, transparent 100%);
+            z-index: 0;
+        }
+        .diferenciador img {
+            width: 130px;
+            height: 130px;
+            border-radius: 50%;
+            object-fit: cover;
+            box-shadow: 0 2px 12px rgba(44,62,80,0.10);
+            border: 4px solid var(--accent);
+            z-index: 1;
+        }
+        .diferenciador-content {
+            z-index: 1;
+        }
+        .diferenciador-content h2 {
+            margin: 0 0 18px 0;
+            font-size: 1.7rem;
+            font-weight: 700;
+            letter-spacing: 1px;
+            color: var(--accent);
+        }
+        .diferenciador-content ul {
+            font-size: 1.18rem;
+            margin: 0;
+            padding-left: 26px;
+        }
+        .diferenciador-content li {
+            margin-bottom: 12px;
+            line-height: 1.5;
+        }
+        /* Servicios */
+        .services {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 36px;
+            justify-content: center;
+            margin-bottom: 56px;
+        }
+        .card {
+            background: var(--gradient-card);
+            border-radius: 22px;
+            box-shadow: 0 8px 32px rgba(44,62,80,0.10);
+            padding: 38px 30px;
+            width: 340px;
+            transition: transform 0.2s, box-shadow 0.2s;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            position: relative;
+            overflow: hidden;
+            color: #fff;
+        }
+        .card::before {
+            content: "";
+            position: absolute;
+            right: -40px;
+            top: -40px;
+            width: 120px;
+            height: 120px;
+            background: radial-gradient(circle, #bfa14a22 60%, transparent 100%);
+            z-index: 0;
+        }
+        .card:hover {
+            transform: translateY(-10px) scale(1.04);
+            box-shadow: 0 16px 48px rgba(44,62,80,0.18);
+        }
+        .card img {
+            width: 100%;
+            border-radius: 16px;
+            margin-bottom: 22px;
+            box-shadow: 0 2px 12px rgba(44,62,80,0.07);
+            z-index: 1;
+        }
+        .card h3 {
+            margin-top: 0;
+            color: var(--accent);
+            font-size: 1.35rem;
+            font-weight: 700;
+            z-index: 1;
+        }
+        .card p {
+            color: #fffbe6;
+            font-size: 1.09rem;
+            margin-bottom: 14px;
+            text-align: center;
+            z-index: 1;
+        }
+        .card ul {
+            padding-left: 18px;
+            margin: 0;
+            font-size: 1rem;
+            color: var(--accent);
+            z-index: 1;
+        }
+        /* Curriculum */
+        .cv-section {
+            background: var(--gradient-card);
+            box-shadow: 0 8px 32px rgba(44,62,80,0.10);
+            border-radius: 32px;
+            padding: 0;
+            overflow: hidden;
+            margin-bottom: 56px;
+            position: relative;
+            color: #fff;
+        }
+        .cv-section::after {
+            content: "";
+            position: absolute;
+            left: -60px;
+            bottom: -60px;
+            width: 180px;
+            height: 180px;
+            background: radial-gradient(circle, #bfa14a33 60%, transparent 100%);
+            z-index: 0;
+        }
+        .cv-header {
+            display: flex;
+            align-items: center;
+            background: var(--gradient-dark);
+            padding: 48px 42px;
+            position: relative;
+            z-index: 1;
+        }
+        .cv-header img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            box-shadow: 0 4px 24px rgba(44,62,80,0.18);
+            border: 6px solid var(--accent);
+        }
+        .cv-header-info {
+            margin-left: 44px;
+        }
+        .cv-header-info h2 {
+            color: var(--accent);
+            margin-bottom: 12px;
+            font-size: 2.2rem;
+            font-weight: 700;
+        }
+        .cv-header-info p {
+            color: #fffbe6;
+            font-size: 1.18rem;
+            margin: 0 0 9px 0;
+        }
+        .cv-content {
+            padding: 42px;
+            position: relative;
+            z-index: 1;
+        }
+        .cv-content h4 {
+            color: var(--accent);
+            margin-top: 0;
+            font-size: 1.18rem;
+            font-weight: 700;
+            letter-spacing: 1px;
+        }
+        .cv-content ul {
+            margin-bottom: 20px;
+            padding-left: 22px;
+            font-size: 1.09rem;
+        }
+        .cv-content ul[style*="columns"] {
+            column-gap: 36px;
+        }
+        .cv-content li {
+            margin-bottom: 9px;
+        }
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 32px 0;
+            background: var(--gradient-dark);
+            color: var(--accent);
+            font-size: 1.12rem;
+            letter-spacing: 1px;
+            margin-top: 56px;
+            border-top-left-radius: 22px;
+            border-top-right-radius: 22px;
+        }
+        @media (max-width: 900px) {
+            .container {
+                padding: 0 8px;
+            }
+            .services {
+                flex-direction: column;
+                align-items: center;
+            }
+            .card {
+                width: 98%;
+            }
+            .diferenciador {
+                flex-direction: column;
+                gap: 22px;
+                text-align: center;
+            }
+            .cv-header {
+                flex-direction: column;
+                gap: 22px;
+                text-align: center;
+            }
+            .cv-header-info {
+                margin-left: 0;
+            }
+            .cv-content {
+                padding: 22px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>BREACKS DIGITAL AGENCY</h1>
+        <p>Soluciones digitales: Fotografía profesional, desarrollo web y más</p>
+    </header>
+    <div class="container">
+        <!-- Diferenciador -->
+        <section class="diferenciador">
+            <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=200&q=80" alt="Atención personalizada">
+            <div class="diferenciador-content">
+                <h2>Nuestros Diferenciadores</h2>
+                <ul>
+                    <li><strong>Atención personalizada 24/7:</strong> Cada cliente cuenta con un asesor exclusivo que acompaña todo el proceso, desde la idea hasta la entrega final.</li>
+                    <li><strong>Entrega exprés:</strong> Compromiso de entrega en tiempos récord sin sacrificar calidad.</li>
+                    <li><strong>Portafolio internacional:</strong> Experiencia en proyectos para clientes de México, EE.UU. y Europa.</li>
+                    <li><strong>Garantía de satisfacción:</strong> Revisión ilimitada hasta que el cliente esté 100% conforme.</li>
+                    <li><strong>Equipo multidisciplinario:</strong> Fotógrafos, diseñadores y desarrolladores trabajando juntos para resultados integrales.</li>
+                    <li><strong>Innovación constante:</strong> Uso de tecnología de punta y tendencias actuales en todos los servicios.</li>
+                    <li><strong>Estilo visual único:</strong> Fusionamos minimalismo y elegancia para que tu marca destaque con personalidad propia.</li>
+                    <li><strong>Experiencia inmersiva:</strong> Presentaciones interactivas y galerías virtuales para tus proyectos.</li>
+                </ul>
+            </div>
+        </section>
+        <!-- Servicios -->
+        <section class="services">
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=800&q=80" alt="Fotografía profesional">
+                <h3>Fotografía Profesional</h3>
+                <p>Capturamos la esencia de tu marca y productos con equipos de alta gama y lentes especializados.</p>
+                <ul>
+                    <li>Lente de 30 mm</li>
+                    <li>Lente de 50 mm</li>
+                    <li>Lente de 80 mm</li>
+                    <li>Lente de 100 mm</li>
+                    <li>Lente de 200 mm</li>
+                </ul>
+            </div>
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1519125323398-675f0ddb6308?auto=format&fit=crop&w=800&q=80" alt="Desarrollo Web">
+                <h3>Desarrollo Web</h3>
+                <p>Diseñamos y desarrollamos páginas web modernas, responsivas y seguras para tu negocio.</p>
+            </div>
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?auto=format&fit=crop&w=800&q=80" alt="Aplicaciones Móviles">
+                <h3>Aplicaciones Móviles</h3>
+                <p>Creamos apps móviles intuitivas y funcionales para Android y iOS, adaptadas a tus necesidades.</p>
+            </div>
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1503676382389-4809596d5290?auto=format&fit=crop&w=800&q=80" alt="Edición de Video">
+                <h3>Edición de Video</h3>
+                <p>Producción y edición de video profesional para promocionar tu empresa, productos o eventos.</p>
+            </div>
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1509228468518-180dd4864904?auto=format&fit=crop&w=800&q=80" alt="Diseño Gráfico">
+                <h3>Diseño Gráfico</h3>
+                <p>Desarrollamos identidad visual, logotipos, banners y material publicitario con creatividad y coherencia para tu marca.</p>
+            </div>
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=800&q=80" alt="Marketing Digital">
+                <h3>Marketing Digital</h3>
+                <p>Gestión de redes sociales, campañas publicitarias y posicionamiento SEO para aumentar tu alcance.</p>
+            </div>
+        </section>
+        <!-- Curriculum Vitae -->
+        <div class="cv-section">
+            <div class="cv-header">
+                <img src="WhatsApp Image 2025-08-24 at 2.12.05 AM.jpeg" alt="Foto de perfil Armando Gómez">
+                <div class="cv-header-info">
+                    <h2>Armando Gómez</h2>
+                    <p><strong>Correo:</strong> armando.gom@email.com</p>
+                    <p><strong>Teléfono:</strong> +52 55 1234 5678</p>
+                    <p><strong>Especialidad:</strong> Fotografía profesional, desarrollo web y aplicaciones móviles</p>
+                </div>
+            </div>
+            <div class="cv-content">
+                <h4>Experiencia Laboral</h4>
+                <ul>
+                    <li><strong>BREACKS Digital Agency</strong> (2022 - Actualidad) <br>
+                        Fotógrafo principal y desarrollador web. Responsable de proyectos de fotografía comercial y desarrollo de sitios web para clientes.</li>
+                    <li><strong>FotoStudio MX</strong> (2019 - 2022) <br>
+                        Fotógrafo de eventos y editor digital.</li>
+                </ul>
+                <h4>Educación</h4>
+                <ul>
+                    <li><strong>Licenciatura en Comunicación Visual</strong> - Universidad La Salle Bajío</li>
+                    <li><strong>Diplomado en Desarrollo Web</strong> - Platzi (2020)</li>
+                </ul>
+                <h4>Habilidades</h4>
+                <ul style="columns:2;">
+                    <li>Fotografía profesional y edición</li>
+                    <li>Desarrollo de páginas web (HTML, CSS, JavaScript)</li>
+                    <li>Diseño gráfico</li>
+                    <li>Trabajo en equipo y liderazgo</li>
+                    <li>Presentaciones interactivas</li>
+                    <li>Galerías virtuales</li>
+                </ul>
+                <h4>Idiomas</h4>
+                <ul>
+                    <li>Español (Nativo)</li>
+                    <li>Inglés (Intermedio)</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <footer>
+        &copy; 2025 BREACKS Digital Agency | Todos los derechos reservados
+    </footer>
+</body>
+</html>
