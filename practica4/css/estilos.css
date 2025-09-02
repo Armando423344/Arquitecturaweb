@@ -1,0 +1,47 @@
+        body {
+            background-color:#a3b18a;
+            font-size:  20px; ;
+            color: white;
+        }
+
+        h1{
+            color:#3a5a40;
+            font-size: 3rem;
+        }
+        #nombre {
+            color: #588157;
+            font-size: 2rem;
+            width : 300px;
+            height: 400px;
+            background-color:#dad7cd;
+            text-align: center;
+            display: block;
+            margin: 0% auto;
+        }
+        #Logo {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+        }
+        .apellido {
+            width: 100%;
+            height: 100px;
+            background-color: #344e41;
+            border: 2px solid black;
+            margin-top: 20px;
+            margin-bottom: 20px;
+            display: block;
+        }
+        .apellido:hover {
+            background-color: #3a5a40;
+            font-size: 50px;
+        }
+                .apellido:hover p {
+                    font-size: 50px;
+                    text-align: center;
+                    }
+        .apellido p {
+            font-size: 2rem;
+            color: white;
+            text-align: center;
+        }
