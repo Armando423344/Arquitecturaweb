@@ -1,0 +1,40 @@
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+
+}
+h1{
+    font-family: "Story Script", sans-serif;
+    text-align: center;
+    color: #333;
+    color : #a1e4a3;
+}
+h2{
+    font-family: "Story Script", sans-serif;
+    text-align: center;
+    color : #e09947;
+}
+#cuadro1{
+    background-color: #e09947;
+    border: 2px solid #333;
+    padding: 20px;
+    margin: 20px;
+    text-align: center;
+    }
+.circulo {
+    width: 100px;
+    height: 100px;
+    background-color: #a1e4a3;
+    border-radius: 50%;
+    margin: 20px auto;
+    margin: auto;
+    text-align: auto;
+    display:  inline-block;
+    justify-content: center;
+    align-items: center ;
+    display: flex;
+    
+}
