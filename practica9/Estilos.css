@@ -1,0 +1,28 @@
+html{
+  font-size: 10px;
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+}
+div {
+  font-size: 40px;
+  width:90%;
+  text-align: center;
+  border-radius: 15px;
+  margin: auto;
+  padding: 10px;  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 15px 15px 15px rgba(190, 9, 9, 0.3);
+    }
+  p {
+    font-size: 1.5em; /* 30px porque el padre (div) tiene 20px */
+  }
+  #hijo{
+    font-size: 1rem; /* 40px porque el padre (div) tiene 40px */
+  }
+  @media (max-width: 600px) {
+    div {
+      flex-direction: column;
+    }
+  }
