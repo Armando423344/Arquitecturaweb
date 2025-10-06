@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>porche</title>
+    <link rel="stylesheet" href="Estilos.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">Porsche</div>
+            <ul class="nav-menu">
+                <li><a href="#modelos">Modelos</a></li>
+                <li><a href="#innovacion">Innovación</a></li>
+                <li><a href="#experiencia">Experiencia</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="hero-content">
+                <h1>Driven by Excellence</h1>
+                <a href="#modelos" class="btn-cta">Descubre más</a>
+                <style>
+                    .hero {
+                        background-image: url('https://images.unsplash.com/photo-1588577277866-8a2ee78cdf35?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+                        background-size: cover;
+                        background-position: center;
+                        color: white;
+                        text-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
+                        padding: 100px 20px;
+                    }
+                </style>
+            </div>
+            <img src="https://images.unsplash.com/photo-1588577277866-8a2ee78cdf35?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Porsche Hero" class="hero-bg" style="display:none;">
+        </section>
+        <section id="modelos" class="modelos">
+            <h2>Modelos Destacados</h2>
+            <div class="modelos-grid">
+                <article class="modelo">
+                    <img src="https://images.unsplash.com/photo-1616340791790-e35e524b827c?q=80&w=774&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Porsche 911">
+                    <h3>Porsche 911</h3>
+                    <p>El ícono deportivo con diseño atemporal y rendimiento legendario.</p>
+                </article>
+                <article class="modelo">
+                    <img src="https://images.unsplash.com/photo-1649642694062-7621050b3994?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Porsche Taycan">
+                    <h3>Porsche Taycan</h3>
+                    <p>Innovación eléctrica, potencia instantánea y lujo sin concesiones.</p>
+                </article>
+                <article class="modelo">
+                    <img src="https://images.unsplash.com/photo-1649479357989-d9c12ccf186f?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Porsche Cayenne">
+                    <h3>Porsche Cayenne</h3>
+                    <p>Versatilidad SUV con el ADN deportivo y la elegancia de Porsche.</p>
+                </article>
+            </div>
+        </section>
+        <section id="innovacion" class="innovacion">
+            <h2>Innovación y Tecnología</h2>
+            <div class="innovacion-features">
+                <div class="feature">
+                    <span class="icon-speed">
+                        <img src="https://cdn-icons-png.flaticon.com/512/3524/3524659.png" alt="Velocidad" width="48" height="48">
+                    </span>
+                    <h4>Velocidad</h4>
+                    <p>Aceleración impresionante y máxima precisión en cada curva.</p>
+                </div>
+                <div class="feature">
+                    <span class="icon-design">
+                        <img src="https://cdn-icons-png.flaticon.com/512/3524/3524667.png" alt="Diseño" width="48" height="48">
+                    </span>
+                    <h4>Diseño</h4>
+                    <p>Estética vanguardista y aerodinámica pensada para el alto rendimiento.</p>
+                </div>
+                <div class="feature">
+                    <span class="icon-engineering">
+                        <img src="https://cdn-icons-png.flaticon.com/512/3524/3524672.png" alt="Ingeniería" width="48" height="48">
+                    </span>
+                    <h4>Ingeniería</h4>
+                    <p>Tecnología alemana de última generación para una experiencia única.</p>
+                </div>
+                <div class="feature">
+                    <span class="icon-sustainability">
+                        <img src="https://cdn-icons-png.flaticon.com/512/3524/3524683.png" alt="Sostenibilidad" width="48" height="48">
+                    </span>
+                    <h4>Sostenibilidad</h4>
+                    <p>Compromiso con la movilidad eléctrica y materiales responsables.</p>
+                </div>
+            </div>
+        </section>
+        <section id="experiencia" class="experiencia">
+            <blockquote>
+                “Conducir un Porsche es sentir la pasión, el control y la libertad en cada kilómetro.”
+            </blockquote>
+        </section>
+        <section id="contacto" class="contacto">
+            <h2>Contáctanos</h2>
+            <form class="contact-form" autocomplete="off">
+                <label for="nombre">Nombre</label>
+                <input type="text" id="nombre" name="nombre" required>
+                <label for="correo">Correo electrónico</label>
+                <input type="email" id="correo" name="correo" required>
+                <button type="submit">Enviar</button>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <div class="footer-social">
+            <a href="#" aria-label="Facebook">
+                <img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" alt="Facebook" width="28" height="28">
+            </a>
+            <a href="#" aria-label="Instagram">
+                <img src="https://cdn-icons-png.flaticon.com/512/733/733558.png" alt="Instagram" width="28" height="28">
+            </a>
+            <a href="#" aria-label="Twitter">
+                <img src="https://cdn-icons-png.flaticon.com/512/733/733579.png" alt="Twitter" width="28" height="28">
+            </a>
+        </div>
+        <div class="footer-info">
+            &copy; 2024 Porsche. Todos los derechos reservados.
+            <a href="#">Aviso legal</a> | <a href="#">Privacidad</a>
+        </div>
+    </footer>
+</body>
+</html>

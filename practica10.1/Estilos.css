@@ -1,0 +1,458 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Poppins:wght@400;700&display=swap');
+
+:root {
+    --porsche-red: #d5001c;
+    --black: #111;
+    --white: #fff;
+    --gray: #e5e5e5;
+    --metal: #b0b0b0;
+    --footer-gray: #cccccc;
+    --header-bg: rgba(17, 17, 17, 0.92);
+    --transition: 0.3s cubic-bezier(.4,0,.2,1);
+}
+
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: 'Montserrat', 'Poppins', Arial, sans-serif;
+    background: var(--white);
+    color: var(--black);
+    line-height: 1.6;
+    min-height: 100vh;
+}
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: var(--header-bg);
+    z-index: 1000;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+    transition: background var(--transition);
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0.7rem 2rem;
+}
+                    .hero {
+                        background-image: url('https://images.unsplash.com/photo-1588577277866-8a2ee78cdf35?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+                        background-size: cover;
+                        background-position: center;
+                        color: white;
+                        text-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
+                        padding: 100px 20px;
+                    }
+
+.logo {
+    font-family: 'Poppins', 'Montserrat', Arial, sans-serif;
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--white);
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.nav-menu {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-menu li a {
+    color: var(--white);
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 1rem;
+    letter-spacing: 1px;
+    position: relative;
+    transition: color var(--transition);
+}
+
+.nav-menu li a:hover,
+.nav-menu li a:focus {
+    color: var(--porsche-red);
+}
+
+@media (max-width: 800px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 0.7rem 1rem;
+    }
+    .nav-menu {
+        gap: 1rem;
+        flex-wrap: wrap;
+    }
+}
+
+.hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    background: url('porsche-hero.jpg') center/cover no-repeat;
+}
+
+.hero::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(17,17,17,0.55);
+    z-index: 1;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    color: var(--white);
+    width: 100%;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.hero-content h1 {
+    font-family: 'Poppins', 'Montserrat', Arial, sans-serif;
+    font-size: 3rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin-bottom: 2rem;
+    text-shadow: 0 4px 24px rgba(0,0,0,0.18);
+}
+
+.btn-cta {
+    display: inline-block;
+    background: var(--porsche-red);
+    color: var(--white);
+    font-family: 'Montserrat', Arial, sans-serif;
+    font-size: 1.2rem;
+    font-weight: 700;
+    padding: 0.9rem 2.5rem;
+    border: none;
+    border-radius: 30px;
+    box-shadow: 0 2px 12px rgba(213,0,28,0.18);
+    cursor: pointer;
+    text-decoration: none;
+    transition: background var(--transition), transform var(--transition);
+}
+
+.btn-cta:hover,
+.btn-cta:focus {
+    background: #a80016;
+    transform: translateY(-2px) scale(1.04);
+}
+.modelos {
+    padding: 5rem 0 3rem 0;
+    background: var(--white);
+    text-align: center;
+}
+
+.modelos h2 {
+    font-family: 'Poppins', 'Montserrat', Arial, sans-serif;
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: var(--black);
+    margin-bottom: 2.5rem;
+    letter-spacing: 1px;
+}
+
+.modelos-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2.5rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.modelo {
+    background: var(--gray);
+    border-radius: 18px;
+    box-shadow: 0 4px 18px rgba(17,17,17,0.10);
+    padding: 2rem 1.2rem 1.5rem 1.2rem;
+    transition: box-shadow var(--transition), transform var(--transition);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.modelo img {
+    width: 100%;
+    max-width: 320px;
+    border-radius: 14px;
+    box-shadow: 0 4px 18px rgba(17,17,17,0.13);
+    margin-bottom: 1.2rem;
+    transition: transform var(--transition), box-shadow var(--transition);
+}
+
+.modelo:hover,
+.modelo:focus-within {
+    box-shadow: 0 12px 36px rgba(213,0,28,0.18);
+    transform: translateY(-6px) scale(1.03);
+}
+
+.modelo img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 12px 36px rgba(213,0,28,0.18);
+}
+
+.modelo h3 {
+    font-family: 'Poppins', 'Montserrat', Arial, sans-serif;
+    font-size: 1.3rem;
+    color: var(--porsche-red);
+    margin-bottom: 0.7rem;
+    font-weight: 700;
+}
+
+.modelo p {
+    color: var(--black);
+    font-size: 1rem;
+    margin-bottom: 0;
+}
+
+@media (max-width: 900px) {
+    .modelos-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+}
+.innovacion {
+    background: var(--gray);
+    padding: 4rem 0 3rem 0;
+    text-align: center;
+}
+
+.innovacion h2 {
+    font-family: 'Poppins', 'Montserrat', Arial, sans-serif;
+    font-size: 2rem;
+    color: var(--black);
+    margin-bottom: 2rem;
+    font-weight: 700;
+}
+
+.innovacion-features {
+    display: flex;
+    justify-content: center;
+    gap: 2.5rem;
+    flex-wrap: wrap;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.feature {
+    background: var(--white);
+    border-radius: 14px;
+    box-shadow: 0 2px 12px rgba(17,17,17,0.08);
+    padding: 2rem 1.2rem;
+    width: 220px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: box-shadow var(--transition), transform var(--transition);
+}
+
+.feature:hover {
+    box-shadow: 0 8px 24px rgba(213,0,28,0.13);
+    transform: translateY(-4px) scale(1.04);
+}
+
+.feature span[class^="icon-"] {
+    display: block;
+    width: 48px;
+    height: 48px;
+    margin-bottom: 1rem;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.icon-speed { background-image: url('icon-speed.svg'); }
+.icon-design { background-image: url('icon-design.svg'); }
+.icon-engineering { background-image: url('icon-engineering.svg'); }
+.icon-sustainability { background-image: url('icon-sustainability.svg'); }
+
+.feature h4 {
+    font-family: 'Poppins', 'Montserrat', Arial, sans-serif;
+    font-size: 1.1rem;
+    color: var(--porsche-red);
+    margin-bottom: 0.5rem;
+    font-weight: 700;
+}
+
+.feature p {
+    color: var(--black);
+    font-size: 0.98rem;
+    margin-bottom: 0;
+}
+
+@media (max-width: 900px) {
+    .innovacion-features {
+        flex-direction: column;
+        align-items: center;
+        gap: 1.5rem;
+    }
+    .feature {
+        width: 90%;
+    }
+}
+
+.experiencia {
+    background: var(--black);
+    color: var(--white);
+    padding: 4rem 0 3rem 0;
+    text-align: center;
+}
+
+.experiencia blockquote {
+    font-family: 'Poppins', 'Montserrat', Arial, sans-serif;
+    font-size: 1.6rem;
+    font-style: italic;
+    color: var(--white);
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 1.5rem 1rem;
+    border-left: 4px solid var(--porsche-red);
+    background: rgba(17,17,17,0.85);
+    box-shadow: 0 2px 12px rgba(213,0,28,0.08);
+}
+.contacto {
+    background: var(--white);
+    padding: 4rem 0 3rem 0;
+    text-align: center;
+}
+
+.contacto h2 {
+    font-family: 'Poppins', 'Montserrat', Arial, sans-serif;
+    font-size: 2rem;
+    color: var(--black);
+    margin-bottom: 2rem;
+    font-weight: 700;
+}
+
+.contact-form {
+    max-width: 400px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+}
+
+.contact-form label {
+    font-family: 'Montserrat', Arial, sans-serif;
+    font-size: 1rem;
+    color: var(--black);
+    font-weight: 500;
+    margin-bottom: 0.3rem;
+    text-align: left;
+}
+
+.contact-form input,
+.contact-form textarea {
+    padding: 0.8rem 1rem;
+    border: 1px solid var(--metal);
+    border-radius: 10px;
+    font-size: 1rem;
+    font-family: 'Montserrat', Arial, sans-serif;
+    background: var(--gray);
+    color: var(--black);
+    transition: border-color var(--transition), box-shadow var(--transition);
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    border-color: var(--porsche-red);
+    box-shadow: 0 0 0 2px rgba(213,0,28,0.13);
+    outline: none;
+}
+
+.contact-form button {
+    background: var(--porsche-red);
+    color: var(--white);
+    font-family: 'Poppins', 'Montserrat', Arial, sans-serif;
+    font-size: 1.1rem;
+    font-weight: 700;
+    padding: 0.8rem 0;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    box-shadow: 0 2px 12px rgba(213,0,28,0.18);
+    transition: background var(--transition), transform var(--transition);
+}
+
+.contact-form button:hover,
+.contact-form button:focus {
+    background: #a80016;
+    transform: translateY(-2px) scale(1.04);
+}
+
+footer {
+    background: var(--black);
+    color: var(--footer-gray);
+    padding: 2rem 0 1rem 0;
+    text-align: center;
+    font-size: 0.98rem;
+}
+
+.footer-social {
+    margin-bottom: 1rem;
+}
+
+.footer-social a {
+    display: inline-block;
+    margin: 0 0.7rem;
+    color: var(--footer-gray);
+    font-size: 1.3rem;
+    transition: color var(--transition);
+    text-decoration: none;
+}
+
+.footer-social a:hover,
+.footer-social a:focus {
+    color: var(--porsche-red);
+}
+
+.footer-info {
+    color: var(--footer-gray);
+    margin-top: 0.5rem;
+}
+
+.footer-info a {
+    color: var(--footer-gray);
+    text-decoration: none;
+    margin: 0 0.5rem;
+    transition: color var(--transition);
+}
+
+.footer-info a:hover,
+.footer-info a:focus {
+    color: var(--porsche-red);
+}
+
+@media (max-width: 600px) {
+    .hero-content h1 {
+        font-size: 2rem;
+    }
+    .modelos h2,
+    .innovacion h2,
+    .contacto h2 {
+        font-size: 1.3rem;
+    }
+    .experiencia blockquote {
+        font-size: 1.1rem;
+        padding: 1rem 0.5rem;
+    }
+    .navbar {
+        padding: 0.7rem 0.5rem;
+    }
+}
