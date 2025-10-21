@@ -1,0 +1,122 @@
+body{
+    font-family: Arial, sans-serif;
+    background-color: #92e2f0;
+    font-size: 16px;
+}
+h1{
+    color: #ffffff;
+    text-align: center;
+    overflow: hidden; 
+    word-wrap: break-word; 
+}   
+.login-card{
+    max-width:380px;
+    margin:28px auto;
+    padding:22px;
+    background:#ffffff;
+    border-radius:12px;
+    box-shadow:0 8px 24px rgba(16,24,40,0.06);
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+    color:#0f172a;
+}
+.login-card .form-inner{display:flex;flex-direction:column;gap:12px;}
+.login-card label{
+    font-size:0.85rem;
+    color:#6b7280;
+    margin-bottom:4px;
+}
+.login-card input{
+    width:100%;
+    padding:12px 14px;
+    border:1px solid #e6e7eb;
+    border-radius:10px;
+    background:#fbfdff;
+    transition:box-shadow .15s ease, border-color .15s ease, transform .05s;
+    font-size:0.95rem;
+    color:#0f172a;
+}
+.login-card input:focus{
+    outline:none;
+    border-color:#7c3aed;
+    box-shadow:0 6px 18px rgba(124,58,237,0.12);
+    transform:translateY(-1px);
+}
+.login-card .btn{
+    margin-top:6px;
+    width:100%;
+    padding:12px;
+    border-radius:10px;
+    border:none;
+    background:linear-gradient(90deg,#6d28d9,#7c3aed);
+    color:#fff;
+    font-weight:600;
+    cursor:pointer;
+    box-shadow:0 8px 18px rgba(124,58,237,0.12);
+}
+.login-card .btn:hover{opacity:0.90; transform:translateY(-1px)}
+.login-card .aux{font-size:0.80rem;color:#94a3b8;text-align:right;margin-top:4px;}
+@media (max-width:420px){ .login-card{margin:18px;padding:16px} }
+
+/* Estilo alternativo: tarjeta minimal y clara */
+.login-card.alt{
+    max-width:380px;
+    margin:28px auto;
+    padding:20px;
+    background: linear-gradient(180deg,#f7fbff 0%,#ffffff 100%);
+    border-radius:14px;
+    border:1px solid rgba(15,23,42,0.04);
+    box-shadow:0 6px 18px rgba(2,6,23,0.04);
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+    color:#0b1220;
+}
+.login-card.alt .form-inner{display:flex;flex-direction:column;gap:10px;}
+.login-card.alt label{color:#475569;font-size:0.85rem;margin-bottom:4px;}
+.login-card.alt input{
+    width:100%;
+    padding:12px 14px;
+    border:1px solid #e9eef6;
+    border-radius:10px;
+    background:#ffffff;
+    transition:box-shadow .12s ease, border-color .12s ease;
+    font-size:0.95rem;
+    color:#0b1220;
+}
+.login-card.alt input:focus{
+    outline:none;
+    border-color:#2563eb;
+    box-shadow:0 8px 20px rgba(37,99,235,0.08);
+}
+.login-card.alt .btn{
+    margin-top:8px;
+    width:100%;
+    padding:12px;
+    border-radius:10px;
+    border:1px solid transparent;
+    background:#ffffff;
+    color:#2563eb;
+    font-weight:700;
+    cursor:pointer;
+    box-shadow:0 4px 12px rgba(37,99,235,0.08);
+}
+.login-card.alt .btn:hover{
+    background:linear-gradient(90deg,#2563eb,#1e40af);
+    color:#fff;
+    transform:translateY(-1px);
+}
+/* Variante oscura para quien prefiera modo night */
+.login-card.dark{
+    background:linear-gradient(180deg,#0f172a,#071022);
+    color:#e6eef8;
+    box-shadow:0 10px 30px rgba(2,6,23,0.6);
+}
+.login-card.dark label{color:#94a3b8}
+.login-card.dark input{
+    background:#0b1220;
+    border:1px solid rgba(255,255,255,0.06);
+    color:#e6eef8;
+}
+.login-card.dark .btn{
+    background:linear-gradient(90deg,#7c3aed,#4c1d95);
+    color:#fff;
+    box-shadow:0 10px 30px rgba(124,58,237,0.16);
+}
