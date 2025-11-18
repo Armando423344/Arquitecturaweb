@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MENU PIZZAS</title>
+</head>
+<body>
+    
+</body>
+</html><!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Don Corleone — Menú</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-dark text-light">
+
+  <header role="banner">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-transparent px-3" role="navigation" aria-label="Main Navigation">
+      <div class="container">
+        <a class="navbar-brand d-flex align-items-center gap-2" href="#top">
+          <img src="img/logo.jpeg" alt="Don Corleone logo" class="brand-logo" style="height:36px; width:auto;">
+          <span class="brand-title">Don Corleone</span>
+        </a>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav"
+                aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="mainNav">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+            <li class="nav-item"><a class="nav-link" href="#pizzas">Pizzas</a></li>
+            <li class="nav-item"><a class="nav-link" href="#bebidas">Bebidas</a></li>
+            <li class="nav-item"><a class="nav-link" href="#entradas">Entradas</a></li>
+            <li class="nav-item"><a class="nav-link" href="#postres">Postres</a></li>
+            <li class="nav-item"><a class="nav-link" href="#contacto">Contacto</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <section id="top" class="hero d-flex align-items-center" aria-label="Encabezado principal">
+    <div class="container text-center">
+      <h1 class="display-5 fw-bold hero-title">Don Corleone</h1>
+      <p class="lead hero-sub">Sabor clásico, masa perfecta — hecho con respeto</p>
+      <a class="btn btn-primary btn-pill mt-3" href="#pizzas" role="button" aria-label="Ver menú">Ver menú</a>
+    </div>
+  </section>
+
+  <main>
+
+    <section id="pizzas" class="py-5">
+      <div class="container">
+        <div class="section-header mb-4">
+          <h2 class="h3 section-title">PIZZAS</h2>
+          <p class="section-lead text-muted">Selecciona tu favorita — hechas al horno con ingredientes premium.</p>
+        </div>
+
+        <div class="row g-3">
+          <article class="col-6 col-md-4 col-lg-3">
+            <div class="card pizza-card h-100 border-0">
+              <img src="img/peperoni.jpeg" class="card-img-top card-img-fit" alt="La Corleone">
+              <div class="card-body">
+                <h3 class="card-title h6 mb-1">La Corleone</h3>
+                <p class="card-text text-muted small mb-2">Salsa pomodoro, mozzarella, pepperoni premium, jamón ahumado y doble queso.</p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <span class="price text-primary fw-bold">$160.00</span>
+                  <div class="btn-group">
+                    <button type="button" class="btn btn-outline-light btn-sm" data-bs-toggle="modal"
+                      data-bs-target="#ingredientesModal"
+                      data-name="La Corleone"
+                      data-img="img/la-corleone.jpg"
+                      data-ingredients="Salsa pomodoro, mozzarella, pepperoni premium, jamón ahumado, doble queso"
+                      aria-label="Ver ingredientes La Corleone">
+                      Ver ingredientes
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="col-6 col-md-4 col-lg-3">
+            <div class="card pizza-card h-100 border-0">
+              <img src="img/albaca.jpeg" class="card-img-top card-img-fit" alt="Caprichosa Italiana">
+              <div class="card-body">
+                <h3 class="card-title h6 mb-1">Caprichosa Italiana</h3>
+                <p class="card-text text-muted small mb-2">Champiñones, jamón, aceitunas negras, pimientos y mozzarella.</p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <span class="price text-primary fw-bold">$140.00</span>
+                  <button type="button" class="btn btn-outline-light btn-sm" data-bs-toggle="modal"
+                    data-bs-target="#ingredientesModal"
+                    data-name="Caprichosa Italiana"
+                    data-img="img/caprichosa-italiana.jpg"
+                    data-ingredients="Champiñones, jamón, aceitunas negras, pimientos, mozzarella"
+                    aria-label="Ver ingredientes Caprichosa Italiana">
+                    Ver ingredientes
+                  </button>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="col-6 col-md-4 col-lg-3">
+            <div class="card pizza-card h-100 border-0">
+              <img src="img/WhatsApp Image 2025-11-18 at 1.03.48 AM (1).jpeg" class="card-img-top card-img-fit" alt="Diavola Picante">
+              <div class="card-body">
+                <h3 class="card-title h6 mb-1">Diavola Picante <span class="spicy-badge" aria-hidden="true">🌶️</span></h3>
+                <p class="card-text text-muted small mb-2">Pepperoni, salami picante, chile jalapeño y mozzarella.</p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <span class="price text-primary fw-bold">$160.00</span>
+                  <button type="button" class="btn btn-outline-light btn-sm" data-bs-toggle="modal"
+                    data-bs-target="#ingredientesModal"
+                    data-name="Diavola Picante"
+                    data-img="img/diavola-picante.jpg"
+                    data-ingredients="Pepperoni, salami picante, chile jalapeño, mozzarella"
+                    aria-label="Ver ingredientes Diavola Picante">
+                    Ver ingredientes
+                  </button>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="col-6 col-md-4 col-lg-3">
+            <div class="card pizza-card h-100 border-0">
+              <img src="img/WhatsApp Image 2025-11-18 at 1.03.48 AM (2).jpeg" class="card-img-top card-img-fit" alt="Cuatro Quesos Suprema">
+              <div class="card-body">
+                <h3 class="card-title h6 mb-1">Cuatro Quesos Suprema</h3>
+                <p class="card-text text-muted small mb-2">Mozzarella, provolone, parmesano y queso azul.</p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <span class="price text-primary fw-bold">$150.00</span>
+                  <button type="button" class="btn btn-outline-light btn-sm" data-bs-toggle="modal"
+                    data-bs-target="#ingredientesModal"
+                    data-name="Cuatro Quesos Suprema"
+                    data-img="img/cuatro-quesos.jpg"
+                    data-ingredients="Mozzarella, provolone, parmesano, queso azul"
+                    aria-label="Ver ingredientes Cuatro Quesos Suprema">
+                    Ver ingredientes
+                  </button>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="col-6 col-md-4 col-lg-3">
+            <div class="card pizza-card h-100 border-0">
+              <img src="img/WhatsApp Image 2025-11-18 at 1.03.48 AM (3).jpeg" class="card-img-top card-img-fit" alt="Pollo Alfredo">
+              <div class="card-body">
+                <h3 class="card-title h6 mb-1">Pollo Alfredo</h3>
+                <p class="card-text text-muted small mb-2">Pollo a la parrilla, salsa Alfredo, espinaca y queso mozzarella.</p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <span class="price text-primary fw-bold">$160.00</span>
+                  <button type="button" class="btn btn-outline-light btn-sm" data-bs-toggle="modal"
+                    data-bs-target="#ingredientesModal"
+                    data-name="Pollo Alfredo"
+                    data-img="img/pollo-alfredo.jpg"
+                    data-ingredients="Pollo a la parrilla, salsa Alfredo, espinaca, mozzarella"
+                    aria-label="Ver ingredientes Pollo Alfredo">
+                    Ver ingredientes
+                  </button>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="col-6 col-md-4 col-lg-3">
+            <div class="card pizza-card h-100 border-0">
+              <img src="img/WhatsApp Image 2025-11-18 at 1.03.48 AM (4).jpeg" class="card-img-top card-img-fit" alt="Hawaiana Don Corleone">
+              <div class="card-body">
+                <h3 class="card-title h6 mb-1">Hawaiana Don Corleone</h3>
+                <p class="card-text text-muted small mb-2">Jamón ahumado, piña natural y queso mozzarella.</p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <span class="price text-primary fw-bold">$160.00</span>
+                  <button type="button" class="btn btn-outline-light btn-sm" data-bs-toggle="modal"
+                    data-bs-target="#ingredientesModal"
+                    data-name="Hawaiana Don Corleone"
+                    data-img="img/hawaiana.jpg"
+                    data-ingredients="Jamón ahumado, piña natural, mozzarella"
+                    aria-label="Ver ingredientes Hawaiana Don Corleone">
+                    Ver ingredientes
+                  </button>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="col-6 col-md-4 col-lg-3">
+            <div class="card pizza-card h-100 border-0">
+              <img src="img/WhatsApp Image 2025-11-18 at 1.03.48 AM (5).jpeg" class="card-img-top card-img-fit" alt="Carnívora Mafia">
+              <div class="card-body">
+                <h3 class="card-title h6 mb-1">Carnívora Mafia</h3>
+                <p class="card-text text-muted small mb-2">Pepperoni, jamón, salchicha italiana, tocino y carne molida.</p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <span class="price text-primary fw-bold">$150.00</span>
+                  <button type="button" class="btn btn-outline-light btn-sm" data-bs-toggle="modal"
+                    data-bs-target="#ingredientesModal"
+                    data-name="Carnívora Mafia"
+                    data-img="img/carnivora-mafia.jpg"
+                    data-ingredients="Pepperoni, jamón, salchicha italiana, tocino, carne molida"
+                    aria-label="Ver ingredientes Carnívora Mafia">
+                    Ver ingredientes
+                  </button>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="col-6 col-md-4 col-lg-3">
+            <div class="card pizza-card h-100 border-0">
+              <img src="img/WhatsApp Image 2025-11-18 at 1.03.49 AM (1).jpeg" class="card-img-top card-img-fit" alt="Vegetariana Fresca">
+              <div class="card-body">
+                <h3 class="card-title h6 mb-1">Vegetariana Fresca</h3>
+                <p class="card-text text-muted small mb-2">Pimiento, cebolla, champiñones, tomate cherry, aceitunas y mozzarella.</p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <span class="price text-primary fw-bold">$150.00</span>
+                  <button type="button" class="btn btn-outline-light btn-sm" data-bs-toggle="modal"
+                    data-bs-target="#ingredientesModal"
+                    data-name="Vegetariana Fresca"
+                    data-img="img/vegetariana-fresca.jpg"
+                    data-ingredients="Pimiento, cebolla, champiñones, tomate cherry, aceitunas, mozzarella"
+                    aria-label="Ver ingredientes Vegetariana Fresca">
+                    Ver ingredientes
+                  </button>
+                </div>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <section id="bebidas" class="py-5 bg-dark">
+      <div class="container">
+        <div class="section-header mb-3">
+          <h2 class="h3 section-title">BEBIDAS INCLUIDAS</h2>
+          <p class="section-lead text-muted">Refrescos, tés y aguas frescas — refill dentro del local</p>
+        </div>
+
+        <div class="row">
+          <div class="col-12 col-md-6">
+            <ul class="list-unstyled">
+              <li class="mb-2"><i class="bi bi-cup-fill text-secondary me-2"></i><strong>Refresco</strong> (Coca-Cola, Sprite, Fanta)</li>
+              <li class="mb-2"><i class="bi bi-ice-tea text-secondary me-2"></i><strong>Té helado</strong></li>
+              <li class="mb-2"><i class="bi bi-droplet text-secondary me-2"></i><strong>Agua fresca</strong> (limón, jamaica, horchata)</li>
+              <li class="mb-2"><i class="bi bi-water text-secondary me-2"></i><strong>Agua natural</strong></li>
+            </ul>
+          </div>
+
+          <div class="col-12 col-md-6 d-flex align-items-center">
+            <p class="mb-0 text-muted small">Nota: Refill en consumo dentro del local.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="entradas" class="py-5">
+      <div class="container">
+        <div class="section-header mb-3">
+          <h2 class="h3 section-title">ENTRADAS Y ACOMPAÑAMIENTOS</h2>
+        </div>
+
+        <div class="row g-3">
+          <div class="col-12 col-md-6 col-lg-4">
+            <div class="card small-card">
+              <div class="card-body">
+                <h3 class="h6">Boneless</h3>
+                <p class="text-muted small mb-1">Clásicos (BBQ, Buffalo, Mango Habanero, Lemon Pepper).</p>
+                <p class="small text-muted mb-0">Porciones: 200 g / 350 g / 500 g — $XX.00</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-12 col-md-6 col-lg-4">
+            <div class="card small-card">
+              <div class="card-body">
+                <h3 class="h6">Alitas Tradicionales</h3>
+                <p class="text-muted small mb-1">Salsas: BBQ, Buffalo, Mango Habanero, Ajo Parmesano, Teriyaki.</p>
+                <p class="small text-muted mb-0">Órdenes de 6 / 10 / 16 — $XX.00</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-12 col-md-6 col-lg-4">
+            <div class="card small-card">
+              <div class="card-body">
+                <h3 class="h6">Dedos de Queso</h3>
+                <p class="text-muted small mb-0">Orden de 6 piezas — $80.00</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-12 col-md-6 col-lg-4">
+            <div class="card small-card">
+              <div class="card-body">
+                <h3 class="h6">Papas a la Francesa</h3>
+                <p class="text-muted small mb-0">Clásicas / Con queso y tocino / Con sazón italiano — $60.00</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-12 col-md-6 col-lg-4">
+            <div class="card small-card">
+              <div class="card-body">
+                <h3 class="h6">Pan de Ajo</h3>
+                <p class="text-muted small mb-0">Tradicional / Con queso y orégano — $80.00</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-12 col-md-6 col-lg-4">
+            <div class="card small-card">
+              <div class="card-body">
+                <h3 class="h6">Ensalada César</h3>
+                <p class="text-muted small mb-0">Lechuga romana, pollo a la parrilla, crutones y aderezo César — $90.00</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <section id="postres" class="py-5 bg-dark">
+      <div class="container">
+        <div class="section-header mb-3">
+          <h2 class="h3 section-title">POSTRES</h2>
+        </div>
+
+        <div class="row g-3">
+          <div class="col-12 col-md-4">
+            <div class="card small-card">
+              <div class="card-body">
+                <h3 class="h6">Canoli estilo siciliano</h3>
+                <p class="text-muted small mb-0">$80.00</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-12 col-md-4">
+            <div class="card small-card">
+              <div class="card-body">
+                <h3 class="h6">Brownie con helado</h3>
+                <p class="text-muted small mb-0">$60.00</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-12 col-md-4">
+            <div class="card small-card">
+              <div class="card-body">
+                <h3 class="h6">Pizza dulce de Nutella y fresa</h3>
+                <p class="text-muted small mb-0">$60.00</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer id="contacto" class="py-4 border-top">
+    <div class="container d-flex flex-column flex-md-row justify-content-between align-items-center">
+      <div class="mb-3 mb-md-0">
+        <strong>Don Corleone</strong><br>
+        Paseo de la rivera 476, Lagos de moreno • Tel: (474) 113-4567<br>
+        Horario: Lun-Dom 12:00 - 23:00
+      </div>
+
+      <div class="d-flex gap-3 align-items-center">
+        <div class="social">
+          <a href="#" class="text-decoration-none text-muted me-2" aria-label="Instagram"><i class="bi bi-instagram fs-5"></i></a>
+          <a href="#" class="text-decoration-none text-muted me-2" aria-label="Facebook"><i class="bi bi-facebook fs-5"></i></a>
+          <a href="#" class="text-decoration-none text-muted" aria-label="Twitter"><i class="bi bi-twitter fs-5"></i></a>
+        </div>
+
+        <div>
+          <a class="btn btn-outline-light btn-sm btn-pill" href="https://www.instagram.com/doncorleone.lagos?igsh=ZzJyank3cTM2YW9o" role="button" aria-label="Hacer pedido rápido" data-bs-toggle="modal" data-bs-target="#pedidoModal">
+            <i class="bi bi-envelope-fill me-1" aria-hidden="true"></i> Hacer pedido
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <div class="modal fade" id="ingredientesModal" tabindex="-1" aria-labelledby="ingredientesLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content bg-dark text-light border-0">
+        <div class="modal-header border-0">
+          <h5 class="modal-title" id="ingredientesLabel">Ingredientes</h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+        </div>
+        <div class="modal-body">
+          <div class="row g-3">
+            <div class="col-12 col-md-6">
+              <img id="modalImg" src="img/placeholder.jpg" alt="Imagen pizza" class="img-fluid rounded">
+            </div>
+            <div class="col-12 col-md-6">
+              <h4 id="modalName" class="h5"></h4>
+              <p id="modalIngredients" class="text-muted small"></p>
+              <p class="mt-3"><span class="fw-bold">Precio:</span> <span id="modalPrice" class="text-primary">$10.00</span></p>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer border-0">
+          <button type="button" class="btn btn-secondary btn-sm" data-bs-dismiss="modal">Cerrar</button>
+          <a href="mailto:pedido@doncorleone.example?subject=Pedido%20-%20Consulta" class="btn btn-primary btn-sm">Pedir ahora</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="pedidoModal" tabindex="-1" aria-labelledby="pedidoLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content bg-dark text-light border-0">
+        <div class="modal-header border-0">
+          <h5 class="modal-title" id="pedidoLabel">Hacer pedido rápido</h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+        </div>
+        <form class="needs-validation" novalidate>
+          <div class="modal-body">
+            <div class="mb-2">
+              <label for="nombrePedido" class="form-label small">Nombre</label>
+              <input type="text" class="form-control form-control-sm bg-transparent text-light" id="nombrePedido" placeholder="Tu nombre" required>
+            </div>
+            <div class="mb-2">
+              <label for="telefonoPedido" class="form-label small">Teléfono</label>
+              <input type="tel" class="form-control form-control-sm bg-transparent text-light" id="telefonoPedido" placeholder="(555) 123-4567" required>
+            </div>
+            <div class="mb-2">
+              <label for="pedidoText" class="form-label small">Pedido</label>
+              <textarea id="pedidoText" class="form-control form-control-sm bg-transparent text-light" rows="3" placeholder="Indica pizzas, cantidades y acompañamientos" required></textarea>
+            </div>
+            <div>
+              <label for="notaPedido" class="form-label small">Nota</label>
+              <input id="notaPedido" type="text" class="form-control form-control-sm bg-transparent text-light" placeholder="Instrucciones especiales (opcional)">
+            </div>
+          </div>
+          <div class="modal-footer border-0">
+            <button type="button" class="btn btn-secondary btn-sm" data-bs-dismiss="modal">Cancelar</button>
+            <button type="submit" class="btn btn-primary btn-sm">Enviar pedido</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+  <script>
+    const ingredientesModal = document.getElementById('ingredientesModal');
+    ingredientesModal.addEventListener('show.bs.modal', event => {
+      const button = event.relatedTarget;
+      const name = button.getAttribute('data-name') || '';
+      const img = button.getAttribute('data-img') || 'img/placeholder.jpg';
+      const ingredients = button.getAttribute('data-ingredients') || '';
+      const price = button.getAttribute('data-price') || '$XX.00';
+
+      document.getElementById('modalName').textContent = name;
+      document.getElementById('modalImg').src = img;
+      document.getElementById('modalImg').alt = name;
+      document.getElementById('modalIngredients').textContent = ingredients;
+      document.getElementById('modalPrice').textContent = price;
+    });
+
+    (function () {
+      'use strict';
+      const forms = document.querySelectorAll('.needs-validation');
+      Array.from(forms).forEach(form => {
+        form.addEventListener('submit', event => {
+          if (!form.checkValidity()) {
+            event.preventDefault();
+            event.stopPropagation();
+          } else {
+            event.preventDefault();
+            alert('Pedido registrado (demo). Reemplazar con integración real.');
+            const modal = bootstrap.Modal.getInstance(document.getElementById('pedidoModal'));
+            modal.hide();
+            form.reset();
+          }
+          form.classList.add('was-validated');
+        }, false);
+      });
+    })();
+  </script>
+</body>
+</html>
